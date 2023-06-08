@@ -1,7 +1,12 @@
 
 import './App.css';
 import React, { useState } from 'react';
+import {StudentCard}  from './Components/StudentCard';
+import { StateFulComp, StatelessComp } from './Components/statefulComponent';
+import Button from './Components/Button';
+
 function App() {
+
 const [acceptCount, setAcceptCount] = useState(0)
   const studentsData = [
     {
@@ -42,8 +47,24 @@ const [acceptCount, setAcceptCount] = useState(0)
      />
   ))}
 </div>
+{/* <StateFulComp/>
+<StatelessComp
+name = {"sanjay"}
+/> */}
+
+<Button
+ background={"crimson"}
+ color="white"
+ pd="15px"
+ m="5px"
+ wd="max-content"
+ onClickFunc={()=>console.log("custom-btn clicked")}
+>
+  Add
+</Button>
+
 </div>
-  );
+  ); 
 }
 // const props={} => 
 // props= {
@@ -55,44 +76,7 @@ const [acceptCount, setAcceptCount] = useState(0)
 
 export default App;
 
-function StudentCard({name, batch, education, acceptCount, setAcceptCount}){
-  const [show, setShow] = useState(true)
 
-  function handleAccept(){
-    setShow(!show)
-    setAcceptCount(acceptCount+1)
-  }
-
-  function handleReject(){
-    setShow(!show)
-    setAcceptCount(acceptCount-1)
-    
-  }
-  return (
-    <div className='student-card'>
-      <img 
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ50haIo6IibH--JO8V4wJT_FGTLu3zECwg5EK_VQoT&s"
-       alt="name"/>
-      <h3>{name}</h3>
-      <p>{batch}</p>
-      <p>{education}</p>
-
-    {
-    show ?   <button 
-      className='accept-btn btn'
-      onClick={handleAccept}
-      >Accept</button> 
-      :    
-      <button 
-      className='reject-btn btn'
-      onClick={handleReject}
-      >Reject</button>
-    }
-      
-
-    </div>
-  )
-}
 
 
 
@@ -119,3 +103,23 @@ function StudentCard({name, batch, education, acceptCount, setAcceptCount}){
 //     </div>
 //   )
 // }
+
+// virtual DOM
+// Components - In depth
+// Component life cycle
+// export types 
+// Stateful and stateless components
+// Reusable components 
+// Passing dynamic data to component
+// Introduction to Hook
+{/* <html>
+<body>
+  <div>
+    <h1></h1>
+    <div>
+      <button></button>
+      <p></p>
+    </div>
+  </div>
+</body>
+</html> */}
