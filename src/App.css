@@ -4,3 +4,11 @@
 .tool-bar{
   margin : 15px;
 }
+.side-bar-styles{
+  height: inherit;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
