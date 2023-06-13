@@ -31,10 +31,12 @@ const studentData = [
 ]
 
 const [data, setData] = useState(studentData)
+
   return (
 <div className="App">
    <StudentList 
    studentData={data}
+   setData ={setData}
    />
 </div>
   ); 
