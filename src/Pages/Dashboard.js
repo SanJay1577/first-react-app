@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Base from "../BasePage/Base";
 import StudentCard from "../Components/StudentCard";
 
-export default function Dashboard({data, setData}){
+export default function Dashboard({student}){
     const [state, setState] = useState(false)
     const [another, setAnother]= useState(false)
     function checkState(){
@@ -24,8 +24,7 @@ export default function Dashboard({data, setData}){
     return (
         <Base>
             <StudentCard
-            data={data}
-            setData={setData}
+             student={student}
             />
         </Base>
     )
