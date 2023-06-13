@@ -11,3 +11,5 @@ module.exports = {
     },
     plugins: [require("daisyui")],
   }
+  //get and delete operation 
+  

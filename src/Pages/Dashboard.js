@@ -23,9 +23,7 @@ export default function Dashboard({student}){
 
     return (
         <Base>
-            <StudentCard
-             student={student}
-            />
+      <div>Dashboard</div>
         </Base>
     )
 }

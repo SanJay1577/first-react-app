@@ -6,6 +6,7 @@ import Base from './BasePage/Base';
 import Dashboard from './Pages/Dashboard';
 import Profile from './Pages/Profile';
 import StudentList from './Components/StudentList';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -34,10 +35,21 @@ const [data, setData] = useState(studentData)
 
   return (
 <div className="App">
-   <StudentList 
-   studentData={data}
-   setData ={setData}
-   />
+
+<Routes>
+  <Route exact path="/" element={<Dashboard/>}/>
+
+  <Route
+  path="/profile" element={<Profile/>}
+  />
+
+  <Route path="/student/all" element={
+    <StudentList 
+    studentData={data}
+    setData ={setData}
+    />}/>
+</Routes>
+
 </div>
   ); 
 }
