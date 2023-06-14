@@ -7,6 +7,7 @@ import StudentList from './Components/StudentList';
 import { Routes, Route } from 'react-router-dom';
 import AddStudents from './Components/AddStudents';
 import EditStudent from './Components/EditStudent';
+import NoPage from './Pages/Nopage';
 
 
 function App() {
@@ -61,7 +62,12 @@ const [data, setData] = useState(studentData)
     studentData={data}
     setData ={setData}
     />}/>
+
+<Route
+path="*" element={<NoPage/>}>
+</Route>
 </Routes>
+
 
 </div>
   ); 
