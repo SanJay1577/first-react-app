@@ -8,6 +8,7 @@ import Profile from './Pages/Profile';
 import StudentList from './Components/StudentList';
 import { Routes, Route } from 'react-router-dom';
 import AddStudents from './Components/AddStudents';
+import EditStudent from './Components/EditStudent';
 
 
 function App() {
@@ -46,6 +47,12 @@ const [data, setData] = useState(studentData)
 
   <Route
   path="/student/add" element={<AddStudents
+    studentData={data}
+    setData ={setData}
+  />}
+  />
+    <Route
+  path="/edit/:id" element={<EditStudent
     studentData={data}
     setData ={setData}
   />}

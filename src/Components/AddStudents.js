@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Base from "../BasePage/Base";
 
+
 export default function AddStudents({studentData, setData}) {
     const [id, setId] = useState("");
     const [name, setName] = useState("");
@@ -9,7 +10,6 @@ export default function AddStudents({studentData, setData}) {
     const [phone, setPhone] = useState("");
     const [qualification, setQualification] = useState("");
     //setId(value) => id
-
     function addnewStudent(){
       const newStudentObj = {
         id, 
@@ -20,16 +20,16 @@ export default function AddStudents({studentData, setData}) {
         qualification
       }
       console.log(newStudentObj)
-      // add new data
-    //   const data = ["sanjay", "kishore"]
-    //   function addData(array, newData){
-    //     //
-    //     console.log(array)
-    //    const newArr =  [...array, newData]
-    //     console.log(newArr)
-    //   }
-      
-    //   addData(data, "aravindh")
+      // adding newdata
+      setData([...studentData, newStudentObj]);
+         //if we wanted to remove data 
+         setId("");
+         setName("")
+         setBatch("")
+         setQualification("")
+         setPhone("")
+         setEmail("")
+
     }
     return (
         <Base>
