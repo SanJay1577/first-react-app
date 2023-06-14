@@ -1,8 +1,6 @@
 
 import './App.css';
 import React, { useState } from 'react';
-import TopBar from './Components/TopBar';
-import Base from './BasePage/Base';
 import Dashboard from './Pages/Dashboard';
 import Profile from './Pages/Profile';
 import StudentList from './Components/StudentList';
