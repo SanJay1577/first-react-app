@@ -7,6 +7,7 @@ import Dashboard from './Pages/Dashboard';
 import Profile from './Pages/Profile';
 import StudentList from './Components/StudentList';
 import { Routes, Route } from 'react-router-dom';
+import AddStudents from './Components/AddStudents';
 
 
 function App() {
@@ -41,6 +42,13 @@ const [data, setData] = useState(studentData)
 
   <Route
   path="/profile" element={<Profile/>}
+  />
+
+  <Route
+  path="/student/add" element={<AddStudents
+    studentData={data}
+    setData ={setData}
+  />}
   />
 
   <Route path="/student/all" element={

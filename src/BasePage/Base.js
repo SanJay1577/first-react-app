@@ -13,7 +13,7 @@ export default function Base({children}){
   <div className="grid flex-grow h-full w-1/5 card rounded-box place-items-center  m-1 bg-neutral text-neutral-content">
       <SideBar/> 
     </div> 
-  <div className="grid flex-grow h-full w-4/5 card m-1 bg-neutral text-neutral-content  rounded-box place-items-center">
+  <div className=" flex-grow h-full w-4/5 card m-1 bg-neutral text-neutral-content  rounded-box place-items-center">
       {children}
   </div>
   </div>    
