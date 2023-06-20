@@ -30,3 +30,10 @@ function App() {
 
 export default App;
 
+
+
+// CREATE - POST - ADD
+// READ   - GET - Esisting data
+// UPDATE - PUT - data update, add 
+// DELETE - DELETE - Delete a data 
+
