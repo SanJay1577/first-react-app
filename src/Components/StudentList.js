@@ -11,7 +11,7 @@ function StudentList(){
             {studentData.map((stud, idx)=>(
                 <StudentCard
                 student={stud}
-                key={stud.id}
+                key={idx}
                 />
             ))}
         </Base>

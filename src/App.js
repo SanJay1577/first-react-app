@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/Profile";
 import StudentList from "./Components/StudentList";
@@ -7,6 +7,8 @@ import { Routes, Route } from "react-router-dom";
 import AddStudents from "./Components/AddStudents";
 import EditStudent from "./Components/EditStudent";
 import NoPage from "./Pages/Nopage";
+import { AppState } from "./Context/AppProvider";
+import { API } from "./API/api";
 
 function App() {
   return (
