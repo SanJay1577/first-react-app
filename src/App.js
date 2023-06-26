@@ -12,7 +12,7 @@ import { API } from "./API/api";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-theme="dark">
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
 
