@@ -1,12 +1,16 @@
 import { useSelector } from "react-redux";
 
 function TopBar() {
-  const { username } = useSelector((state) => state.loginInfo.data);
+  const { username } = useSelector(
+    (state) => 
+    state.loginInfo.data);
 
   return (
     <div className="navbar bg-neutral text-neutral-content rounded-lg tool-bar">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">{username}</a>
+        <a 
+        className="btn btn-ghost normal-case text-xl">
+          {username}</a>
       </div>
       <div className="flex-none mx-10">
         <div className="form-control">
