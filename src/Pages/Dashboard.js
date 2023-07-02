@@ -16,6 +16,7 @@ export default function Dashboard({student}){
   const userLogin = ()=>{
     const userData = {
         username, 
+        email,
         password
     }
     console.log(userData)
@@ -51,6 +52,19 @@ export default function Dashboard({student}){
                     className="input input-bordered input-md w-96"
                     value={username}
                     onChange={(e)=>setUserName(e.target.value)}
+
+                     />
+
+                </label>
+
+                <label className="input-group input-group-md m-2">
+                    <span>Email Add</span>
+                    <input 
+                    type="email" 
+                    placeholder="Enter Student Name" 
+                    className="input input-bordered input-md w-96"
+                    value={email}
+                    onChange={(e)=>setEmail(e.target.value)}
 
                      />
 

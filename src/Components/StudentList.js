@@ -23,7 +23,7 @@ function StudentList(){
             {studentData.slice(currentPage*2-2, currentPage*2).map((stud, idx)=>(
                 <StudentCard
                 student={stud}
-                key={idx}
+                key={stud._id}
                 />
             ))}
             

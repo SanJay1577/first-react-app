@@ -8,7 +8,7 @@ export default function Profile(){
     const navigate = useNavigate();
     
     useEffect(()=>{
-       if (!localStorage.getItem("username")){
+       if (!localStorage.getItem("token")){
            navigate("/",{replace:true});
        }
     }, [navigate]); 
@@ -17,17 +17,38 @@ export default function Profile(){
 
     return (
         <Base>
-           <div className="artboard p-2 mt-24 w-96 bg-base-300">
-           {username && (
-            <>
-            <div className="text-bold">Profile Info</div>
-               <p>Name : {username}</p>
-               <p>Email: {email}</p>
-             </>
-            )}
-           </div>
-  
+            
+<div class="grid grid-cols-2 grid-flow-row auto-rows-max">
+  <div className="bg-base-200">
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+        <div className="h-10 p-2 m-2"><p className="">first box</p></div>
+  </div>
 
+  <div className="bg-base-300">
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     <div className="h-10 p-2 m-2"><input placeholder="first key" className="input  input-xs w-full max-w-lg"/></div>
+     </div>
+</div>
         </Base>
     )
 }
