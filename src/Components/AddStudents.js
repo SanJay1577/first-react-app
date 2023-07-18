@@ -40,7 +40,7 @@ export default function AddStudents() {
     const {studentData, setData} = AppState()
     async function addnewStudent(newStudent){
 // api fields 
-    const response = await fetch(`${API}student/add`, {
+    const response = await fetch(`${API}students/add`, {
         method:"POST",
         body : JSON.stringify(newStudent),
         headers: {
@@ -50,7 +50,7 @@ export default function AddStudents() {
     })
      const data = await response.json();
       // adding newdata
-      setData([...studentData, data]);
+      setData([...studentData, data.data]);
       values.name = ""
       values.batch = ""
       values.email =""

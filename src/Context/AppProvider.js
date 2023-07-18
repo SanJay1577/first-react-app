@@ -19,7 +19,7 @@ function AppProvider({ children }) {
 
   useEffect(() => {
     const getAllStudents = async () => {
-      const response = await fetch(`${API}student/all`, {
+      const response = await fetch(`${API}students/all`, {
         method: "GET",
         headers: {
           "x-auth-token":localStorage.getItem("token")
@@ -31,7 +31,7 @@ function AppProvider({ children }) {
         return
       }
       console.log("data consoled", data);
-      setData(data.data);
+      setData(data);
     };
     getAllStudents();
   }, []);

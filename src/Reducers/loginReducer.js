@@ -18,7 +18,7 @@ const loginSlice = createSlice({
         }, 
         logoutUser : (state, action)=>{
             state.data = {username:"", password:""}
-            localStorage.removeItem("username");
+            localStorage.removeItem("token")
         }
     }
 })
@@ -39,5 +39,6 @@ async function loginStudentData(payload){
         console.log(data.message)
         return
       }
-     localStorage.setItem("token",data.token)
-}
+      // i'll set it in local storage
+      localStorage.setItem("token", data.token)
+    }
